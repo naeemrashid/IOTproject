@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXToggleButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+
+<BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="496.0" prefWidth="783.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
+   <left>
+      <AnchorPane prefHeight="496.0" prefWidth="783.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="65.0" layoutY="18.0" prefHeight="34.0" prefWidth="73.0" text="Device">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="183.0" layoutY="17.0" prefHeight="36.0" prefWidth="52.0" text="Status">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="dev1" layoutX="54.0" layoutY="67.0" prefHeight="34.0" prefWidth="73.0" text="Device 1" />
+            <Label fx:id="dev2" layoutX="54.0" layoutY="110.0" prefHeight="34.0" prefWidth="73.0" text="Device 2" />
+            <Label fx:id="dev3" layoutX="54.0" layoutY="172.0" prefHeight="34.0" prefWidth="73.0" text="Device 3" />
+            <Label fx:id="dev4" layoutX="54.0" layoutY="233.0" prefHeight="34.0" prefWidth="73.0" text="Device 4" />
+            <JFXToggleButton fx:id="tog1" layoutX="156.0" layoutY="49.0" text="On/Off" />
+            <JFXToggleButton fx:id="tog2" layoutX="156.0" layoutY="99.0" text="On/Off" />
+            <JFXToggleButton fx:id="tog3" layoutX="156.0" layoutY="161.0" text="On/Off" />
+            <JFXToggleButton fx:id="tog4" layoutX="156.0" layoutY="222.0" text="On/Off" />
+            <TableView fx:id="table" layoutX="300.0" layoutY="56.0" prefHeight="210.0" prefWidth="472.0">
+              <columns>
+                <TableColumn fx:id="name" prefWidth="75.0" text="Name" />
+                <TableColumn fx:id="priceDaily" prefWidth="75.0" text="Price Daily" />
+                  <TableColumn fx:id="dailyUnits" prefWidth="99.0" text="Daily Units" />
+                  <TableColumn fx:id="priceMonthly" prefWidth="91.0" text="Price Monthly" />
+                  <TableColumn fx:id="monthlyUnits" prefWidth="130.0" text="Monthly Units" />
+              </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+   </left>
+</BorderPane>
