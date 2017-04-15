@@ -33,7 +33,7 @@ public class Main extends Application {
 			HBox hbox = new HBox();
 			hbox.setSpacing(10);
 			hbox.getChildren().addAll(logobtn,title,settingbtn);
-			Parent Interface = FXMLLoader.load(getClass().getResource("Interface.fxml"));
+			Parent Interface = FXMLLoader.load(getClass().getResource("Interface2.fxml"));
 			BorderPane root = new BorderPane();
 			root.setTop(hbox);
 			root.setCenter(Interface);
@@ -46,7 +46,7 @@ public class Main extends Application {
 					Parent settingInterface = FXMLLoader.load(getClass().getResource("Settings.fxml"));
 					root.setCenter(settingInterface);
 				} catch (Exception e1) {
-					// TODO Auto-generated catch block
+
 					e1.printStackTrace();
 				}
 			});

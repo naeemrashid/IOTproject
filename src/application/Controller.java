@@ -18,6 +18,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
@@ -58,23 +59,28 @@ public class Controller implements Initializable {
     @FXML
     private TableView<URLdetails> table;
     @FXML
-    private TableColumn<?, ?> name;
+    private TableColumn<URLdetails, String> name;
 
     @FXML
-    private TableColumn<?, ?> priceDaily;
+    private TableColumn<URLdetails, String> priceDaily;
 
     @FXML
-    private TableColumn<?, ?> dailyUnits;
+    private TableColumn<URLdetails, String> dailyUnits;
 
     @FXML
-    private TableColumn<?, ?> priceMonthly;
+    private TableColumn<URLdetails, String> priceMonthly;
 
     @FXML
-    private TableColumn<?, ?> monthlyUnits;
+    private TableColumn<URLdetails, String> monthlyUnits;
     public static ObservableList<URLdetails> list = FXCollections.observableArrayList();
 //	643 60
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
+		name.setCellValueFactory(new PropertyValueFactory<URLdetails,String>("name"));
+		priceDaily.setCellValueFactory(new PropertyValueFactory<URLdetails,String>("priceDaily"));
+		dailyUnits.setCellValueFactory(new PropertyValueFactory<URLdetails,String>("dailyUnits"));
+		priceMonthly.setCellValueFactory(new PropertyValueFactory<URLdetails,String>("priceMonthly"));
+		monthlyUnits.setCellValueFactory(new PropertyValueFactory<URLdetails,String>("monthlyUnits"));
 		list.add(new URLdetails("Bulb", "60 $", "40 ","1200", "1000"));
 		list.add(new URLdetails("Bulb", "60 $", "40 ","1200", "1000"));
 		list.add(new URLdetails("Bulb", "60 $", "40 ","1200", "1000"));
@@ -84,48 +90,62 @@ public class Controller implements Initializable {
 }
 
 	class URLdetails {
+		
 		private	StringProperty name;
 		private	StringProperty priceDaily;
 		private	StringProperty dailyUnits;
 		private	StringProperty priceMonthly;
 		private	StringProperty monthlyUnits;
 			
-			public URLdetails(String name , String priceDaily,String dailyUints, String priceMonthly ,String monthlyUnits){
+			 URLdetails(String name , String priceDaily,String dailyUints, String priceMonthly ,String monthlyUnits){
 				this.name = new SimpleStringProperty(name);
 				this.priceDaily = new SimpleStringProperty(priceDaily);
 				this.dailyUnits = new SimpleStringProperty(dailyUints);
 				this.priceMonthly = new SimpleStringProperty(priceMonthly);
 				this.monthlyUnits = new SimpleStringProperty(monthlyUnits);
 			}
-			public String getUrl() {
+			 String getName() {
 				return name.get();
 			}
-			public String getDate() {
-				return priceMonthly.get();
+
+			 void setName(String name) {
+				this.name = new SimpleStringProperty(name);
 			}
-			public String getEmail() {
-				return monthlyUnits.get();
-			}
-			
-			public String getStatus() {
+
+			 String getPriceDaily() {
 				return priceDaily.get();
 			}
-			public String getTime() {
+
+			 void setPriceDaily(String priceDaily) {
+				this.priceDaily = new SimpleStringProperty(priceDaily);;
+			}
+
+			 String getDailyUnits() {
 				return dailyUnits.get();
 			}
-			public void setStatus(String status){
-				this.priceDaily = new SimpleStringProperty(status);
+
+			 void setDailyUnits(String dailyUnits) {
+				this.dailyUnits = new SimpleStringProperty(dailyUnits);
 			}
-			public void setTime(String time){
-				this.dailyUnits = new SimpleStringProperty(time);
+
+			 String getPriceMonthly() {
+				return priceMonthly.get();
 			}
-			public void setDate(String date){
-				this.priceMonthly = new SimpleStringProperty(date);
+
+			 void setPriceMonthly(String priceMonthly) {
+				this.priceMonthly = new SimpleStringProperty(priceMonthly);
 			}
-			@Override
-			public String toString(){
-				return this.name.toString();
+
+			 String getMonthlyUnits() {
+				return monthlyUnits.get();
 			}
+
+			 void setMonthlyUnits(String monthlyUnits) {
+				this.monthlyUnits = new SimpleStringProperty(monthlyUnits);
+			}
+
+			
 		}
+	
 
 

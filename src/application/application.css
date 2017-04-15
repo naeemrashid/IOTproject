@@ -1,1 +1,67 @@
 /* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+.background {
+    -fx-background-color: #1d1d1d;
+}
+
+
+.table-view {
+    -fx-base: #1d1d1d;
+    -fx-control-inner-background: #1d1d1d;
+    -fx-background-color: #1d1d1d;
+    -fx-table-cell-border-color: transparent;
+    -fx-table-header-border-color: transparent;
+    -fx-padding: 5;
+}
+
+.button{
+	-fx-background-color:#1d1d1d;
+	-fx-text-fill:white ;
+	}
+.table-view .column-header-background {
+    -fx-background-color: transparent;
+}
+
+.table-view .column-header, .table-view .filler {
+    -fx-size: 35;
+    -fx-border-width: 0 0 1 0;
+    -fx-border-color: 
+        transparent
+        transparent
+        derive(-fx-base, 80%) 
+        transparent;
+    -fx-border-insets: 0 10 1 0;
+}
+
+.table-view .column-header .label {
+   /*-fx-font-size: 20pt; */ 
+   /* -fx-font-family: "Segoe UI Light"; */
+    -fx-text-fill: white;
+    -fx-alignment: center-left;
+    -fx-opacity: 1;
+}
+
+.table-view:focused .table-row-cell:filled:focused:selected {
+    -fx-background-color: #c0392b;
+}
+
+.data0.chart-pie { -fx-pie-color: #00ff00; }
+.data1.chart-pie { -fx-pie-color: #80ff80; }
+.data2.chart-pie { -fx-pie-color: #ffff00; }
+.data3.chart-pie { -fx-pie-color: #e6e6ff; }
+.data4.chart-pie { -fx-pie-color: #ff00ff; }
+.data5.chart-pie { -fx-pie-color:  #ff0000; }
+.data6.chart-pie { -fx-pie-color: deepskyblue; }
+.data7.chart-pie { -fx-pie-color: cyan; }
+.data8.chart-pie { -fx-pie-color: steelblue; }
+.data9.chart-pie { -fx-pie-color: teal; }
+.data10.chart-pie { -fx-pie-color: royalblue; }
+.data11.chart-pie { -fx-pie-color: dodgerblue; }
+.chart-pie .legend{
+	-fx-background-color:#1d1d1d;
+	}
+	.label{
+	-fx-background-color:#1d1d1d;
+	-fx-text-fill:white ;
+	}
+	
+

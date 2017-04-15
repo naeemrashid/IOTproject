@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="451.0" prefWidth="831.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ChartControls">
+   <center>
+      <BorderPane prefHeight="451.0" prefWidth="800.0" style="-fx-background-color: #1d1d1d;" BorderPane.alignment="CENTER">
+         <left>
+            <TableView fx:id="table" prefHeight="451.0" prefWidth="478.0" style="-fx-background-color: #1d1d1d;" BorderPane.alignment="CENTER" />
+         </left>
+         <right>
+            <PieChart fx:id="chart" legendSide="TOP" opacity="0.89" prefHeight="451.0" prefWidth="346.0" titleSide="BOTTOM" BorderPane.alignment="CENTER" />
+         </right>
+      </BorderPane>
+   </center>
+</BorderPane>

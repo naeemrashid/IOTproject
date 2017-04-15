@@ -13,10 +13,6 @@
     -fx-padding: 5;
 }
 
-.button{
-	-fx-background-color:#1d1d1d;
-	-fx-text-fill:white ;
-	}
 .table-view .column-header-background {
     -fx-background-color: transparent;
 }
@@ -41,27 +37,6 @@
 }
 
 .table-view:focused .table-row-cell:filled:focused:selected {
-    -fx-background-color: #c0392b;
+    -fx-background-color: -fx-focus-color;
 }
-
-.data0.chart-pie { -fx-pie-color: #00ff00; }
-.data1.chart-pie { -fx-pie-color: #80ff80; }
-.data2.chart-pie { -fx-pie-color: #ffff00; }
-.data3.chart-pie { -fx-pie-color: #e6e6ff; }
-.data4.chart-pie { -fx-pie-color: #ff00ff; }
-.data5.chart-pie { -fx-pie-color:  #ff0000; }
-.data6.chart-pie { -fx-pie-color: deepskyblue; }
-.data7.chart-pie { -fx-pie-color: cyan; }
-.data8.chart-pie { -fx-pie-color: steelblue; }
-.data9.chart-pie { -fx-pie-color: teal; }
-.data10.chart-pie { -fx-pie-color: royalblue; }
-.data11.chart-pie { -fx-pie-color: dodgerblue; }
-.chart-pie .legend{
-	-fx-background-color:#1d1d1d;
-	}
-	.label{
-	-fx-background-color:#1d1d1d;
-	-fx-text-fill:white ;
-	}
-	
 
