@@ -82,4 +82,19 @@
 .tab:selected .tab-label {
     -fx-text-fill: black;
 }
-
+#tweakPane{
+	-fx-text-fill: white;
+	-fx-background-color: #1d1d1d;
+	
+}
+#tweakPane .label{
+	-fx-text-fill: white;
+}
+#tweakPane .text-field{
+	-fx-text-fill: white;
+}
+#tweakPane .combo-box .list-cell{
+	-fx-text-fill: white;
+	-fx-font-size:12pt;
+	
+}
