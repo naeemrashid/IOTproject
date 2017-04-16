@@ -20,18 +20,16 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.effect.Glow;
 import javafx.scene.effect.Reflection;
+import javafx.scene.layout.BorderPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 
-public class ChartControls implements Initializable{
-	 @FXML
-	    private TableView<Details> table;
-
-	    @FXML
-	    private PieChart chart;
+public class ChartControls implements Initializable{ 
 	    private ObservableList<Details> list = FXCollections.observableArrayList();
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
+		TableView<Details> table = new TableView<Details>();
+		PieChart chart =new PieChart() ;
 		TableColumn<Details, String> name = new TableColumn<>("Name");
 		name.setPrefWidth(100);
 		TableColumn<Details, String> todayExpense = new TableColumn<>("Today Expense");
@@ -61,13 +59,15 @@ public class ChartControls implements Initializable{
 				new PieChart.Data("Device 7", 300),
 				new PieChart.Data("Device 8", 50),
 				new PieChart.Data("Device 9", 6)
-				
 			
 				);
 		chart.setLabelsVisible(true);
 		chart.setLabelLineLength(3);
 		chart.setLegendSide(Side.BOTTOM);
 		chart.setData(pieChartData);
+		BorderPane pane = new BorderPane();
+		pane.setLeft(table);
+		pane.setRight(chart);
 		
 		
 		  
