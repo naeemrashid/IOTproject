@@ -2,6 +2,9 @@
 .background {
     -fx-background-color: #1d1d1d;
 }
+.root{
+    -fx-font-family: "Arial" ,Helvetica;
+}
 
 
 .table-view {
@@ -56,13 +59,27 @@
 .data9.chart-pie { -fx-pie-color: teal; }
 .data10.chart-pie { -fx-pie-color: royalblue; }
 .data11.chart-pie { -fx-pie-color: dodgerblue; }
-.chart-pie .legend{
-	-fx-background-color:#1d1d1d;
+.chart-pie Label.chart-legend-item{
+	-fx-text-fill: white;
 	}
 /*.label{
 	-fx-background-color:#1d1d1d;
 	-fx-text-fill:white ;
 	} */	
-	
-	
+	.tab-header-background {
+    -fx-background-color: #1d1d1d ;
+    -fx-text-fill: black;
+    }
+    
+	.tab:selected {
+	-fx-background-color: orange ;
+}
+.tab .tab-label{
+	-fx-text-fill:#c0392b;
+	-fx-font-size: 12pt;
+	-fx-font-family:"Arial";
+}
+.tab:selected .tab-label {
+    -fx-text-fill: black;
+}
 

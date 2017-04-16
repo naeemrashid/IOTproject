@@ -2,36 +2,58 @@
 
 <?import com.jfoenix.controls.JFXComboBox?>
 <?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXToggleButton?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.text.Font?>
-
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1">
    <center>
-      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #666666;" BorderPane.alignment="CENTER">
+      <GridPane BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="165.0" minWidth="10.0" prefWidth="165.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="208.0" minWidth="10.0" prefWidth="122.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="244.0" minWidth="10.0" prefWidth="80.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="242.0" minWidth="10.0" prefWidth="229.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="124.0" minHeight="7.0" prefHeight="41.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="193.0" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="247.0" minHeight="10.0" prefHeight="46.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="298.0" minHeight="10.0" prefHeight="258.0" vgrow="SOMETIMES" />
+        </rowConstraints>
          <children>
-            <Label layoutX="62.0" layoutY="41.0" prefHeight="28.0" prefWidth="114.0" text="        Device">
-               <font>
-                  <Font size="14.0" />
-               </font>
-            </Label>
-            <Label layoutX="403.0" layoutY="41.0" prefHeight="28.0" prefWidth="106.0" text="        Limit">
-               <font>
-                  <Font size="14.0" />
-               </font>
-            </Label>
-            <Label layoutX="62.0" layoutY="95.0" prefHeight="28.0" prefWidth="114.0" text="        Device 1" />
-            <Label layoutX="62.0" layoutY="152.0" prefHeight="28.0" prefWidth="114.0" text="       Device 2" />
-            <Label layoutX="62.0" layoutY="210.0" prefHeight="28.0" prefWidth="114.0" text="        Device 3" />
-            <JFXTextField layoutX="382.0" layoutY="93.0" />
-            <JFXTextField layoutX="382.0" layoutY="151.0" />
-            <JFXTextField layoutX="382.0" layoutY="209.0" />
-            <JFXComboBox layoutX="530.0" layoutY="93.0" />
-            <JFXComboBox layoutX="531.0" layoutY="151.0" />
-            <JFXComboBox layoutX="531.0" layoutY="209.0" />
+            <Label prefHeight="45.0" prefWidth="182.0" text="                       Device" />
+            <Label prefHeight="45.0" prefWidth="182.0" text="                       Status" GridPane.columnIndex="1" />
+            <Label prefHeight="45.0" prefWidth="182.0" text="                       Device 1" GridPane.rowIndex="1" />
+            <Label prefHeight="45.0" prefWidth="182.0" text="                       Device 2" GridPane.rowIndex="2" />
+            <Label prefHeight="45.0" prefWidth="182.0" text="                       Device 3" GridPane.rowIndex="3" />
+            <JFXToggleButton text="ON/OFF" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <graphic>
+                  <Label prefHeight="45.0" prefWidth="182.0" text="                       Device" />
+               </graphic>
+            </JFXToggleButton>
+            <Label prefHeight="45.0" prefWidth="182.0" text="                       Device" />
+            <JFXToggleButton text="ON/OFF" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <graphic>
+                  <Label prefHeight="45.0" prefWidth="182.0" text="                       Device" />
+               </graphic>
+            </JFXToggleButton>
+            <JFXToggleButton text="ON/OFF" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <graphic>
+                  <Label prefHeight="45.0" prefWidth="182.0" text="                       Device" />
+               </graphic>
+            </JFXToggleButton>
+            <Label prefHeight="45.0" prefWidth="182.0" text="       Limit" GridPane.columnIndex="2" />
+            <JFXTextField maxWidth="86.0" minWidth="86.0" prefHeight="31.0" prefWidth="86.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <JFXTextField maxWidth="86.0" minWidth="86.0" prefHeight="31.0" prefWidth="86.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <JFXTextField maxWidth="86.0" minWidth="86.0" prefHeight="31.0" prefWidth="86.0" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+            <JFXComboBox GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <JFXComboBox GridPane.columnIndex="3" GridPane.rowIndex="2" />
+            <JFXComboBox GridPane.columnIndex="3" GridPane.rowIndex="3" />
          </children>
-      </AnchorPane>
+      </GridPane>
    </center>
 </BorderPane>

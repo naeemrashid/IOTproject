@@ -24,16 +24,15 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 
-public class ChartControls implements Initializable{ 
-	    private ObservableList<Details> list = FXCollections.observableArrayList();
-	@Override
-	public void initialize(URL location, ResourceBundle resources) {
+public class ChartControls { 
+	public BorderPane getPane() {
 		TableView<Details> table = new TableView<Details>();
 		PieChart chart =new PieChart() ;
+		ObservableList<Details> list = FXCollections.observableArrayList();
 		TableColumn<Details, String> name = new TableColumn<>("Name");
 		name.setPrefWidth(100);
 		TableColumn<Details, String> todayExpense = new TableColumn<>("Today Expense");
-		todayExpense.setPrefWidth(100);
+		todayExpense.setPrefWidth(105);
 		TableColumn<Details, String> todayUnits = new TableColumn<>("Today Units");
 		todayUnits.setPrefWidth(100);
 		TableColumn<Details, String> totalExpense = new TableColumn<>("Total Expense");
@@ -53,23 +52,22 @@ public class ChartControls implements Initializable{
 				new PieChart.Data("Device 1", 200),
 				new PieChart.Data("Device 2", 130),
 				new PieChart.Data("Device 3", 100),
-				new PieChart.Data("Device 4", 200),
-				new PieChart.Data("Device 5", 10),
-				new PieChart.Data("Device 6", 20),
-				new PieChart.Data("Device 7", 300),
-				new PieChart.Data("Device 8", 50),
-				new PieChart.Data("Device 9", 6)
+				new PieChart.Data("Device 4", 200)
 			
 				);
-		chart.setLabelsVisible(true);
+		chart.setLabelsVisible(false);
+		chart.setLegendVisible(true);
+		chart.setMaxSize(400, 400);
+		chart.setLegendSide(Side.RIGHT);
 		chart.setLabelLineLength(3);
 		chart.setLegendSide(Side.BOTTOM);
 		chart.setData(pieChartData);
 		BorderPane pane = new BorderPane();
+		pane.setStyle("-fx-background-color: #1d1d1d");
 		pane.setLeft(table);
 		pane.setRight(chart);
 		
-		
+		return pane;
 		  
 	}
 

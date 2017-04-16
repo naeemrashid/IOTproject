@@ -4,7 +4,10 @@ import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXTabPane;
 
 import javafx.application.Application;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXMLLoader;
+import javafx.geometry.Insets;
+import javafx.geometry.Side;
 import javafx.stage.Stage;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -24,50 +27,37 @@ public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) {
 		try {
-			Image setting = new Image(getClass().getResourceAsStream("setting.png"));
+//			Image setting = new Image(getClass().getResourceAsStream("setting.png"));
 			Image logoimg = new Image(getClass().getResourceAsStream("logo.png"));
 //			Button settingbtn = new Button("",new ImageView(setting));
-			Label settingLabel = new Label("",new ImageView(setting));
 //			settingLabel.setStyle("-fx-background-color:#1d1d1d");
-			settingLabel.setPrefSize(50, 50);
 			JFXButton logobtn = new JFXButton("",new ImageView(logoimg));
 			Label title = new Label("       Energy Saving System");
 			title.setFont(new Font(30));
-			title.setPrefSize(643, 60);
+			title.setPrefSize(650, 60);
 			title.setStyle("-fx-background-color:#1d1d1d; \n -fx-text-fill:white ;");
 			HBox hbox = new HBox();
 			hbox.setStyle("-fx-background-color:#1d1d1d");
 			hbox.setSpacing(10);
-			hbox.getChildren().addAll(logobtn,title,settingLabel);
-			VBox vbox = new VBox();
-			vbox.setStyle("-fx-background-color:#1d1d1d");
-			vbox.setSpacing(10);
-			vbox.getChildren().add(hbox);
-			Parent Interface = FXMLLoader.load(getClass().getResource("Interface2.fxml"));
+			hbox.setPadding(new Insets(10,10,10,10));
+			hbox.getChildren().addAll(logobtn,title);
 			BorderPane root = new BorderPane();
-			root.setTop(vbox);
+			root.setTop(hbox);
 			JFXTabPane pane = new JFXTabPane();
+			pane.setSide(Side.RIGHT);
 			Tab tab1 = new Tab();
 			Tab tab2 = new Tab();
 			tab2.setText("Tweaks");
-			tab2.setContent(FXMLLoader.load(getClass().getResource("Settings.fxml")));
+			tab2.setContent(new Tweaks().getPane());
 			tab1.setText("Statistics");
-			tab1.setContent(Interface);
+			tab1.setContent(new ChartControls().getPane());
 			pane.getTabs().addAll(tab1,tab2);
 			root.setCenter(pane);
-			Scene scene = new Scene(root,835,550);
+			Scene scene = new Scene(root,910,550);
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 			primaryStage.setScene(scene);
 			primaryStage.show();
-			settingLabel.addEventHandler(MouseEvent.MOUSE_CLICKED, e ->{
-				try {
-					Parent settingInterface = FXMLLoader.load(getClass().getResource("Settings.fxml"));
-					root.setCenter(settingInterface);
-				} catch (Exception e1) {
-
-					e1.printStackTrace();
-				}
-			});
+			
 		} catch(Exception e) {
 			e.printStackTrace();
 		}
