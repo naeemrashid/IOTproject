@@ -47,10 +47,10 @@
     -fx-background-color: #c0392b;
 }
 
-.data0.chart-pie { -fx-pie-color: #00ff00; }
-.data1.chart-pie { -fx-pie-color: #80ff80; }
-.data2.chart-pie { -fx-pie-color: #ffff00; }
-.data3.chart-pie { -fx-pie-color: #e6e6ff; }
+.data0.chart-pie { -fx-pie-color: #80ff80; }
+.data1.chart-pie { -fx-pie-color: #33ff33; }
+.data2.chart-pie { -fx-pie-color: #009900; }
+.data3.chart-pie { -fx-pie-color: #ccffcc; }
 .data4.chart-pie { -fx-pie-color: #ff00ff; }
 .data5.chart-pie { -fx-pie-color:  #ff0000; }
 .data6.chart-pie { -fx-pie-color: deepskyblue; }
@@ -92,6 +92,8 @@
 }
 #tweakPane .text-field{
 	-fx-text-fill: white;
+	-fx-font-size:12pt;
+	-fx-font-family:"Courier New";
 }
 #tweakPane .combo-box .list-cell{
 	-fx-text-fill: white;

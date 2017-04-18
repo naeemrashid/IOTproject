@@ -27,7 +27,7 @@ public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) {
 		try {
-//			Image setting = new Image(getClass().getResourceAsStream("setting.png"));
+//			Image setting = new Image(getClass().getResourceAsStream("setting.png"j));
 			Image logoimg = new Image(getClass().getResourceAsStream("logo.png"));
 //			Button settingbtn = new Button("",new ImageView(setting));
 //			settingLabel.setStyle("-fx-background-color:#1d1d1d");
@@ -47,11 +47,13 @@ public class Main extends Application {
 			pane.setSide(Side.RIGHT);
 			Tab tab1 = new Tab();
 			Tab tab2 = new Tab();
+			Tab tab3 = new Tab();
+			tab3.setText("Settings");
 			tab2.setText("Tweaks");
 			tab2.setContent(new Tweaks().getPane());
 			tab1.setText("Statistics");
 			tab1.setContent(new ChartControls().getPane());
-			pane.getTabs().addAll(tab1,tab2);
+			pane.getTabs().addAll(tab1,tab2,tab3);
 			root.setCenter(pane);
 			Scene scene = new Scene(root,910,550);
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
