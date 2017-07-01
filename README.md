@@ -1,11 +1,11 @@
-# Energy Saving System ##*IOT Project* 
-### Client Side UI in javaFx.
-
-![stat](https://user-images.githubusercontent.com/15648371/27762831-27fed17e-5e2e-11e7-9608-50e9c1d4b0e8.PNG)
-
+Energy Saving System 
+====================
+Client Side UI in javaFx.
+-------------------------
+![stat](https://user-images.githubusercontent.com/15648371/27762989-6e3e93ca-5e30-11e7-9a13-16cb5bd3e79d.PNG)
 ## Description
 > An IOT based project whose purpose was to build a system which 
-> helps user manage his monthly budget about his home appliance e.g lights, fans etc.
+> helps user manage his monthly budget about his home appliances e.g lights, fans etc.
 > + Note: Project is partially completed.
 
 

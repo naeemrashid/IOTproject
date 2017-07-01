@@ -45,8 +45,8 @@ public class ChartControls {
 		totalExpense.setCellValueFactory(new PropertyValueFactory<Details,String>("totalExpense"));
 		totalUnits.setCellValueFactory(new PropertyValueFactory<Details,String>("totalUnits"));
 		table.getColumns().addAll(name,todayExpense,todayUnits,totalExpense,totalUnits);
-		Details detail1 = new Details("naeem", "3400", "40", "6000", "67");
-		list.addAll(detail1, new Details("naeem", "3400", "40", "6000", "67"),new Details("naeem", "3400", "40", "6000", "67"),new Details("naeem", "3400", "40", "6000", "67"),new Details("naeem", "3400", "40", "6000", "67"),new Details("naeem", "3400", "40", "6000", "67"),new Details("naeem", "3400", "40", "6000", "67"),new Details("naeem", "3400", "40", "6000", "67"),new Details("naeem", "3400", "40", "6000", "67"));
+		Details detail1 = new Details("Lights", "3400", "40", "6000", "67");
+		list.addAll(detail1, new Details("Refrigerator", "40000", "40", "8000", "67"),new Details("Television", "3000", "40", "5000", "67"),new Details("Fans", "300", "20", "600", "47"),new Details("A.C", "7000", "80", "10000", "100"),new Details("Oven", "3400", "50", "6500", "70"),new Details("Washing Machine", "3700", "60", "6500", "80"));
 		table.setItems(list);
 		ObservableList<PieChart.Data> pieChartData = FXCollections.observableArrayList(
 				new PieChart.Data("Device 1", 200),
