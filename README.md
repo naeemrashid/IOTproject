@@ -14,3 +14,5 @@ Client Side UI in javaFx.
 + User can turn on/off his devices remotely with his app.
 + User can view his daily report on electricity consumption of his house.
 + User can reconfigure assigned Watt or Rupees to each Device.
+
+![tweak](https://user-images.githubusercontent.com/15648371/27762832-28035212-5e2e-11e7-9c8d-e51245990eeb.PNG)
